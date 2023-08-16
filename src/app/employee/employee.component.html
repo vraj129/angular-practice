@@ -1,0 +1,24 @@
+<div style="padding: 10px 10px 10px 10px;">
+
+  <div class="mb-3" style="width:200px; display:inline-block; height: 100px;">
+
+    <input cFormControl id="inputEmail-1" type="text" name="value" [(ngModel)]="employeeSearch">
+    <br>
+    <button cButton color="success" (click)="getEmployee()">Search</button>
+    <button cButton color="success" (click)="resetData()" style="margin-left: 10px;">Reset</button>
+  </div>
+  <br>
+  <br>
+  <c-card *ngFor="let employee of employeeData.employees" style="margin-bottom: 10px; padding: 10px; cursor: pointer;">
+    <label [ngClass]="employee.position ==='Angular' ? 'red' : 'green'">{{employee.firstName}}</label>
+    <img *ngIf="employee.department==='Design'" src="https://i.ibb.co/LvM5pWR/Screenshot-from-2023-08-15-11-24-55.png"
+      width="30px" height="30px" />
+    <img *ngIf="employee.department==='development'"
+      src="https://i.ibb.co/DwZzwZw/Screenshot-from-2023-08-15-11-25-09.png" width="30px" height="30px" />
+  </c-card>
+  <br>
+  <br>
+  <br>
+  <label>Employee Count :</label>
+  <label> {{employeeData.employees.length}}</label>
+</div>

@@ -1,0 +1,15 @@
+<form cForm (ngSubmit)="onSubmit()" [formGroup]="form" style="padding: 10px 10px 10px 10px ;">
+  <c-card style="padding: 10px 10px 10px 10px ;">
+    <div class="mb-3">
+      <label cLabel for="inputEmail-1">Email address</label>
+      <input cFormControl id="inputEmail-1" type="email" formControlName="email">
+
+    </div>
+    <div class="mb-3">
+      <label cLabel for="inputPassword-1">Password</label>
+      <input cFormControl id="inputPassword-1" type="password" formControlName="password">
+    </div>
+
+    <input cButton color="primary" type="submit" style="width: 100px; color: white; background-color: palegreen;">
+  </c-card>
+</form>
